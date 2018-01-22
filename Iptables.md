@@ -16,7 +16,8 @@ Typy łańcuchów reguł stosowanych dla pakietów:
 
 > iptables -A : dołączenie reguły do istniejących
 
-# Sprawdzenie konfiguracji iptables
+Sprawdzenie konfiguracji iptables
+--------------------------
             iptables -L
             iptables -L | grep policy
             iptables -L -n -v
@@ -27,18 +28,21 @@ Typy łańcuchów reguł stosowanych dla pakietów:
 * -v : szczegółowe informacje
 * -n : wyświetl adresy IP, nie DNS (przyśpiesza wyświetlenie reguł)
 
-#Akceptacja każdego ruchu
+Akceptacja każdego ruchu
+----------------------------
 _iptables --policy INPUT ACCEPT_
 _iptables --policy OUTPUT ACCEPT_
 _iptables --policy FORWARD ACCEPT_
 
-#Blokowanie każdego ruchu
+Blokowanie każdego ruchu
+-----------------------------------
 _iptables --policy INPUT DROP_
 _iptables --policy OUTPUT DROP_
 _iptables --policy FORWARD DROP_
 
 
-#Blokowanie połączeń z jednego adresu IP
+Blokowanie połączeń z jednego adresu IP
+----------------------------------------
 
 iptables -A INPUT -s 10.10.10.10 -j DROP            
 
