@@ -2,7 +2,7 @@ Brief definition:
     `iptables is a commad-line firewall utility that uses policy chains to allow or block traffic`
 
 Instalation:
-    <sudo apt-get install iptables>
+    `sudo apt-get install iptables`
 
 
 Polish text notes for better understanding
