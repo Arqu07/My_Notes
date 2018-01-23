@@ -28,6 +28,17 @@ Sprawdzenie konfiguracji iptables
 * -v : szczegółowe informacje
 * -n : wyświetl adresy IP, nie DNS (przyśpiesza wyświetlenie reguł)
 
+Usuwanie reguł 
+---------------------------------
+
+* iptables -F : usunięcie wszystkich reguł
+* iptables -D INPUT 4 : usuń czwartą linie
+* iptables -D INPUT -s 202.54.1.1 -j DROP : znajdź source (-s) IP 202.54.1.1 i usuń z reguł 
+
+Dodawanie Reguł
+-------------------------------------
+
+
 Akceptacja każdego ruchu
 ----------------------------
 _iptables --policy INPUT ACCEPT_
@@ -46,3 +57,4 @@ Blokowanie połączeń z jednego adresu IP
 
 iptables -A INPUT -s 10.10.10.10 -j DROP            
 
+[best page describing it](https://www.cyberciti.biz/tips/linux-iptables-examples.html)
